@@ -1,0 +1,122 @@
+:root{
+    --color-primary: #EEE2DF;
+    --color--primary-highlight: #EED7C5;
+    --color-secondary: #C89F9C;
+    --color-secondary-highlight: #C97C5D;
+    --color-font-base: #071f47;
+    --color-font-base-highlight: #547AA5;
+
+    --background-primaty: #B36A5E;    
+}
+
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+
+body {
+    background: var(--background-primaty);
+    color: var(--color-font-base);
+
+}
+
+.hero {
+    background: var(--color-primary);
+}
+
+.hero .container{
+    display:flex;
+    align-items: center;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 20px 30px;
+    max-width: 600px;
+}
+
+.hero-content{
+    width: 100%;
+}
+
+.title {
+    font-size: 60px;
+}
+
+.hero-photo{
+    min-width: 300px;
+}
+
+.hero-photo img{
+    object-fit: cover;
+}
