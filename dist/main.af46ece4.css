@@ -1,12 +1,31 @@
 :root{
-    --color-primary: #EEE2DF;
-    --color--primary-highlight: #EED7C5;
+     /*colors specials*/
+    --background-secondary: #E8EFFE;
+    --background-tertiary:#EBD66B; 
+    /*colors*/
+    --color-primary: #EED7DF;
+    --color--primary-highlight:#ffffff;
+
+    --color-font-base: #7F7F8B;
+    --color-font-base-highlight: #F8F8F8;
+
     --color-secondary: #C89F9C;
     --color-secondary-highlight: #C97C5D;
-    --color-font-base: #071f47;
-    --color-font-base-highlight: #547AA5;
 
-    --background-primaty: #B36A5E;    
+    --color-font-inverted: #f5f5f5;
+    --color-cards: #FFF4E5;
+    /* backgrouns*/
+    --background-primaty: #B36A5E;
+
+
+
+    /* font-sizes*/
+    --font-size-base: 10px;
+    --font-size-sm: 1.8rem;
+    --font-size-md: 2.4rem;
+    --font-size-lg: 3.6rem;
+    --font-size-xl: 4.8rem;
+
 }
 
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
@@ -45,6 +64,8 @@ h5,
 h6 {
   font-size: 100%;
   font-weight: normal;
+  font-family: 'Spectral', serif;
+  line-height: 1.125;
 }
 
 ul {
@@ -59,6 +80,8 @@ select {
 
 html {
   box-sizing: border-box;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
 }
 
 *, *::before, *::after {
@@ -84,41 +107,156 @@ td,
 th {
   padding: 0;
 }
+/* Fiish */
 
-
+/* HML ELEMENTS*/
+/*fondo*/
 body {
-    background: var(--background-primaty);
-    color: var(--color-font-base);
-
-}
-
-.hero {
     background: var(--color-primary);
+    color: var(--color-font-base);  
 }
 
-.hero .container{
-    display:flex;
+p {
+  color: var(--color-font-base-highlight);
+  font-size: var(--font-size-md);
+  margin: 20px 0;
+  font-family: 'Karla', sans-serif;
+}
+
+button {
+  padding: 25px 50px;
+  border: 1px solid transparent;
+  background: var(--color-secondary);
+  color: var(--color-font-inverted);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 600;
+  max-width: 300px;
+  width: 100%;
+}
+
+/*COMPONENTS*/
+.section{
+  overflow: hidden;
+  padding: 20px 30px;
+}
+/*texto*/
+.container{
+    display: flex;
     align-items: center;
-    height: 100vh;
+    justify-content: flex-start;
+    min-height: 100vh;
+    height: 100%;
     margin: 0 auto;
-    padding: 20px 30px;
-    max-width: 600px;
+    max-width: 800px;
 }
 
-.hero-content{
-    width: 100%;
+.container.is-short {
+  min-height: auto;
+}
+
+.container.is-column {
+  flex-direction: column;
 }
 
 .title {
-    font-size: 60px;
+  font-size: var(--font-size-xl);
+  margin-bottom: 20px;
 }
 
-.hero-photo{
-    min-width: 300px;
+.subtitle{
+  font-size: var(--font-size-md);
 }
 
-.hero-photo img{
-    object-fit: cover;
+.title span {
+  color: var(--color-secondary);
+}
+
+.title strong {
+  display: inline-block;
+  margin-top: 50px ;
+  font-size: var(--font-size-lg);
+}
+.title.is-inverted{
+  color: var(--background-primaty);
+}
+
+.card {
+  background: var(--color-cards);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 12px;
+  box-shadow: 2px 8px 15px 10px rgba(0, 0, 0, 0.05),
+  4px 5px 10px 0 rgba(0, 0, 0, 0.1), 2px 2px 5px 2px rgba(0, 0, 0, 0.25) ;
+  width: 250px;
+}
+
+.card.title{
+  text-shadow: -1px -1px 0 black;
+}
+.card.first{
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.card.second{
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.card.third{
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+/*SECTIONS*/
+.hero {
+  background: var(--color-primary) url("/foto.c5e87154.png") no-repeat;
+  background-size: 850px;
+  background-position: calc(100% + 150px) calc(100% + 200px);
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.biography{
+  background: var(--background-secondary);
+}
+
+.biography-title {
+  margin-right: 50px;
+}
+
+.expertise{
+  background: var(--background-tertiary);
+}
+
+.expertise-item.has-cards {
+  display: flex;
+}
+
+/*mobile*/
+@media(max-width: 600px){
+  :root {
+        /* font-sizes*/
+        --font-size-base: 14px;
+  }
+  /*ELEMENTS*/
+  button{
+    width: 100%;
+  }
+  /*COMPONENTS*/
+  .hero{
+    background: none;
+  }
+
+  .biography.container{
+    flex-direction: column;
+  }
+
+  .expertise-item.has-cards {
+    flex-direction: column;
+  }
+
 }
 
 

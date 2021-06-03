@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nancy Espinosa</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&family=Spectral:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&family=Spectral:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./main.css" />
     
 </head>
 <body>
   
   <main>
-    <header class="hero">
+    <header class="section hero">
       <div class="container">
         <div class="hero-content"> 
           <h1 class="title">
-            <span>Hola,</span> Soy Nancy Espinosa.
+            <span>Hola,</span> Soy Nancy Espinosa.</br>
             <strong>Estudiante de Ingenieria Industrial.</strong>
           </h1>
           <p>
@@ -22,29 +26,61 @@
           </p>
           <button>Contact me</button>
         </div>
-        <div class="hero-photo">
-          <img src="./assets/images/foto.png"/>
-        </div>
       </div> 
     </header>
     
-    <article class="biography">
-
+    <article class="section biography">
+      <div class="container is-short">
+        <div class="biography-title">
+          <h1 class="title"> Biografía </h1>
+          <button> Dowload CV</button>
+        </div>
+        <div>
+          <p>
+            <strong> Amante a la programación y la ciencia de datos</strong>
+          </p>
+          <p>
+            Estudiante de ingeniería industrial, con conocimientos en diferentes herramientas ofimáticas (Power Query, Power Pivot y Power Bi), gestores de bases de datos (Access y SQL) y manejo de diferentes lenguajes de programación (Python y R). 
+          </p>
+          <p>
+            Alta capacidad de análisis, metodología de investigación, recopilación, manipulación y visualización de datos. 
+          </p>
+          <p>
+            Fuertes habilidades analíticas, conocimientos en estadística y modelado matemático. 
+          </p>
+          <p>
+            Enfoque orientado a metas, autoaprendizaje, investigador y en equipo de trabajo.
+          </p>
+        </div>         
+      </div>   
     </article>
 
-    <article class="expertise">
-      <section  class="expertise-section">
-
-      </section>
-
-      <section id="skills" class="expertise-section">
-
-      </section>
-
-      <section id="frameworks-and-software" class="expertise-section">
-
-      </section>
-
+    <article class="expertise section">
+      <div class="container is-column">
+        <h1 class="title is-inverted"> Mi experiencia </h1>
+        <section  class="expertise-item has-cards">
+          <div class="card first">
+            <h1 class="title">Python</h1>
+            <h2 class="subtitle">intermedio</h2>
+            <p>Ciencia de datos y ML.</p>
+            <p>Pandas, sklearn, tensorflow et ál.</p>
+          </div>
+          <div class="card second">
+            <h1 class="title">Power Bi</h1>
+            <h2 class="subtitle">Avanzado</h2>
+            <p>Dashboard integrados</p>
+            <p>Power Query y Python</p>
+          </div>
+        </section>
+  
+        <section class="expertise-item">
+  
+        </section>
+  
+        <section class="expertise-item">
+  
+        </section>
+      </div>
     </article>
 
     <article class="contact">
